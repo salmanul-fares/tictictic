@@ -1,7 +1,9 @@
-To Do:
+﻿To Do:
 add instructions
-add a custom css navbar
+add a custom css navbar - done
 remove console.log() - done
+change theme option - done
+add more pages
 
 Might Do:
 When game is over, disallow play continuation - done
