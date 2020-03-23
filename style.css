@@ -24,6 +24,7 @@ body {
 }
 
 main {
+	margin-left:5rem;
 	padding: 1rem;
 }
 
@@ -62,12 +63,17 @@ main {
 	filter: grayscale(100%) opacity(0.6);
 	transition: var(--transition-speed-navbar);
 }
+.logo .nav-link:hover{
+	background: black;
+}
 
 .nav-link:hover {
-	filter grayscale(0%) opacity(1);
+	filter: grayscale(0%) opacity(1);
 	background: var(--bg-secondary);
 	color: var(--text-secondary);
 }
+
+
 .link-text {
 	display:none;
 	margin-left: 1rem;
@@ -84,16 +90,17 @@ svg path{
 	transition: var(--transition-speed-navbar);
 }
 
+.logo .nav-link{
+	filter:none;
+}
+
 .logo{
 	color: var(--text-secondary);
 	background: var(--secd-bg-color);
 }
 
-.logo svg path{
-	color:black;
-}
-
 .logo-text{
+	color:#ececec;
 	display:inline;
 	position:absolute;
 	left: -900px;
@@ -130,7 +137,7 @@ svg path{
 		height: 100vh;
 	}
 	.navbar:hover{
-		width:20rem;
+		width:18rem;
 	}
 	.navbar:hover .link-text{
 		display:block;
@@ -163,6 +170,41 @@ svg path{
 		letter-spacing: 0.3ch;
 		width: 100%;
 	}
+}
+
+/*Theme elements*/
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --main-bg-color: #322332;
+  --text-color-one: white;
+}
+
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+  --main-bg-color: #cddccd;
+  --text-color-one: black;
+}
+
+.theme-icon {
+  display: none;
+}
+
+.dark #darkIcon {
+  display: block;
+}
+
+.light #lightIcon {
+  display: block;
+}
+
+.solar #solarIcon {
+  display: block;
 }
 
 
@@ -205,9 +247,9 @@ svg path{
 
 .game-info {
   color          : var(--text-color-one);
-  font-size      : 2.4vh;
+  font-size      : 1.2rem;
   text-transform : uppercase;
-  padding		 : 2vh;
+  padding		 : 0;
   margin		 : 6vh auto;
 }
 
@@ -218,10 +260,9 @@ svg path{
 	margin-bottom: 1rem;
 	text-align: center;
   justify-content: center;
-  margin         : 8vh auto;
-  margin-top	 : 4rem;;
+  margin         : 10vh auto;
   color          : var(--text-color-one);
-  font-size      : 6vh;
+  font-size      : 2rem;
   letter-spacing : 0.3ch;
 }
 
@@ -232,10 +273,10 @@ svg path{
 
 #new-game-btn {
   margin    : 6vh auto;
-  font-size : 2.5vh;
-  padding   : 0.5vh 2vh;
-  height    : 6vh;
-  background: #282828;
+  font-size : 1rem;
+  padding   : 0.5rem 2rem;
+  height    : 0.5 rem;
+  background: var(--bg-primary);
   color     : var(--icon-color-main);
   border    : 1px solid black;
   cursor    : pointer;
@@ -246,7 +287,7 @@ svg path{
 }
 
 #new-game-btn:hover {
-  background: #111111;
+  background: black;;
   border-width:3px;
 }
 
