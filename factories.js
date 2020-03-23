@@ -9,8 +9,7 @@ const gamePiece = ['blue', 'green']; //if changing array, update css class names
 /******** Global Vars ********/
 
 gameInfo.style.display = 'none';
-let freeSpaces = gameBoxes.filter(e => !e.classList.contains('selected'));
-let selectBoxes = [];
+let selectBoxes = [];  //obtain freeSpaces as gameBoxes.filter(e => !e.classList.contains('selected'))
 const winningPatterns = [
   '123',
   '147',
