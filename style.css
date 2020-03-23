@@ -1,0 +1,94 @@
+* {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+:root{
+	--main-bg-color : #111111;
+	--text-color-one : white; //for title and game info
+}
+
+body {
+  background     : var(--main-bg-color);
+  justify-content: center;
+}
+
+.game-box-container {
+  display              : grid;
+  justify-content      : center; 
+  grid-template-columns: repeat(3, 12vh);
+  grid-template-rows   : repeat(3, 12vh);
+}
+
+.game-box {
+  display      : grid;
+  border       : 1px solid black;
+  align-items  : center;
+  justify-items: center;
+  transition :background 1000s;
+}
+
+.game-box:hover {
+	background:rgba(200,200,200,0.4);
+}
+
+.blue:after {
+  font-size: 6vh;
+  color    : blue;
+  content  : "X";
+  
+}
+
+.green:after {	
+  font-size: 6vh;
+  content  : "X";
+  color    : green;
+}
+
+.game-info {
+  color          : var(--text-color-one);
+  font-size      : 2.4vh;
+  text-transform : uppercase;
+  padding		 : 2vh;
+  margin		 : 6vh auto;
+}
+
+.title {
+  display        : flex;
+  justify-content: center;
+  margin         : 8vh auto;
+  margin-top	 : 20vh;
+  color          : var(--text-color-one);
+  font-size      : 6vh;
+}
+
+.new-game {
+  display        : flex;
+  justify-content: center;
+}
+
+#new-game-btn {
+  margin    : 6vh auto;
+  font-size : 2.5vh;
+  padding   : 0.5vh 2vh;
+  height    : 6vh;
+  background: #282828;
+  color     : red;
+  border    : 1px solid black;
+  cursor    : pointer;
+  border-radius:3vh;
+  text-transform : uppercase;
+  opacity:1;
+  transition: background 0.3s, border-width 0.2s, opacity 2s;
+}
+
+#new-game-btn:hover {
+  background: #111111;
+  border-width:3px;
+}
+
+.selected:hover{
+	background:none;
+}
