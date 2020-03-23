@@ -16,3 +16,11 @@ function babyAI(Board){
 	}
 	return play_pos;
 }
+
+function manAI(Board, WinningCombos){
+	return 0;
+}
+
+function godAI(Board, WinningCombos){
+	return 0;
+}
