@@ -4,7 +4,7 @@ const newGameBtn = document.querySelector('#new-game-btn');
 const gameBoxContainer = document.querySelector('.game-box-container');
 const gameInfo = document.querySelector('.game-info');
 const gameBoxes = Array.from(document.querySelectorAll('.game-box'));//array from zero to eight of each of the boxes
-const gamePiece = ['blue', 'green'];
+const gamePiece = ['blue', 'green']; //if changing array, update css class names also!
 
 /******** Global Vars ********/
 
@@ -105,12 +105,12 @@ const GameController = (() => {
     // disable input of gameBoxes (removeEventListener)
 	gameBoxContainer.removeEventListener('click', GameBoard.addMark);
 	gameBoxes.forEach(box => {
-		box.classList.add('selected');
+		box.classList.add('selected'); //workaround to disable css onHover animations
     });
     setTimeout(() => {
       gameInfo.style.display = 'none';
       newGameBtn.style.display = 'inline';
-    }, 2000);
+    }, 2000); //after 2 seconds, previous game results are gone and new game button is displayed.
   }
 
   return { findMatch, getCombinations, gameOver, replay };
