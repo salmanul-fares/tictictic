@@ -1,13 +1,4 @@
 ﻿To Do:
 add instructions
-add a custom css navbar - done
-remove console.log() - done
-change theme option - done
-add more pages
-
-Might Do:
-When game is over, disallow play continuation - done
-rename variables
-rewrite comments to make more sense and personal
-
-Develop AI of three kinds — random, not in threes, god
+add about us
+redo pretty printing
