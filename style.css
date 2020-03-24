@@ -51,6 +51,7 @@ body {
 }
 
 main {
+	position:relative;
 	margin-left:5rem;
 	padding: 1rem;
 }
@@ -126,6 +127,14 @@ main {
 	transition:var(--transition-speed-navbar);
 }
 
+.logo svg {
+		transform: rotate(0deg);
+		transition: var(--transition-speed-navbar);
+	}
+
+.navbar:hover .logo svg {
+	transform: rotate(-180deg);
+}
 
 .nav-link svg{
 	width: 2rem;
@@ -145,17 +154,29 @@ svg path{
 /*	***		CSS for the game	***		*/
 
 .game-box-container {
+  position: absolute;
+  opacity:0;
+  top:0; left:0;
+  margin-left:50%; margin-top:50vh;
+  transform: translate(-50%,-50%);
   display              : grid;
   justify-content      : center; 
   grid-template-columns: repeat(3, 12vh);
   grid-template-rows   : repeat(3, 12vh);
 }
 
+.game-box-container.appear {
+	transition:900ms;
+	opacity:1;
+}
+
 .game-box {
+ 
+
   display      : grid;
   align-items  : center;
   justify-items: center;
-  transition :background 1000s;
+  transition   : filter 600ms;
   
   border-radius:10px;
   
@@ -169,7 +190,7 @@ svg path{
 
 
 .game-box:hover {
-	background:rgba(200,200,200,0.4);
+	filter:opacity(0.5);
 }
 
 .blue:after {
@@ -179,18 +200,35 @@ svg path{
   
 }
 
-.green:after {	
+.green:after {
   font-size: 6vh;
   content  : "X";
   color    : green;
+  
 }
 
+.selected:after{
+	transition:var(--transition-speed-navbar);
+	filter:opacity(1);
+}
+
+
+
 .game-info {
+  position:fixed;
+  bottom:0;
   color          : var(--text-color-one);
   font-size      : 1.2rem;
   text-transform : uppercase;
+  font-weight:600;
   padding		 : 0;
-  margin		 : 6vh auto;
+  margin		 : 6rem auto;
+  
+  transition: all 200ms;
+}
+
+.game-info.change {
+	opacity:0
 }
 
 .title {
@@ -213,27 +251,31 @@ svg path{
 }
 
 #new-game-btn {
-  margin    : 6vh auto;
-  font-size : 1rem;
-  padding   : 0.5rem 2rem;
-  height    : 0.5 rem;
-  background: var(--bg-primary);
+  position: absolute;
+  top:0; left:0;
+  margin-left:50%; margin-top:50vh;
+  transform: translate(-50%,-50%);
+  height    : 20vh;
   color     : var(--icon-color-main);
-  border    : 1px solid black;
   cursor    : pointer;
-  border-radius:3vh;
+  border-radius:50%;	
   text-transform : uppercase;
   opacity:1;
-  transition: background 0.3s, border-width 0.2s, opacity 2s;
+  background: var(--main-bg-color);
+  transition: all 400ms;
 }
 
+#new-game-btn.disappear{
+	filter:opacity(0);
+	z-index:-1;
+}
 #new-game-btn:hover {
-  background: black;;
-  border-width:3px;
+  background: var(--icon-color-bg);
+  
 }
 
 .selected:hover{
-	background:none;
+	filter:none;
 }
 
 /****Navbar for Large Screens*/
@@ -257,15 +299,9 @@ svg path{
 	.navbar:hover .logo-text{
 		left: 0px;
     }
-
-	.logo svg {
-		transform: rotate(0deg);
-		transition: var(--transition-speed-navbar);
-	}
-
+	
 	.navbar:hover .logo svg {
 		margin-left:14.5rem;
-		transform: rotate(-180deg);
 	}
 
 	.logo{

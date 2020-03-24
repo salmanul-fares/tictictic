@@ -26,21 +26,28 @@ const winningPatterns = [
 const GameBoard =( () => {
   const start = () => {
 	gameBoxContainer.addEventListener('click', GameBoard.addMark);
-    newGameBtn.style.display = 'none';
+    newGameBtn.classList.add('disappear');
+	newGameBtn.removeEventListener('click', GameBoard.start);
+	gameBoxContainer.classList.add('appear');
     selectBoxes = [];
     gameBoxes.forEach(box => {
       box.classList.remove('blue', 'green', 'selected');
-	  box.style.transition = 'background 0.3s';
     });
-
-    // set message "blue's Turn"
+	
+	//make last game's loser play first in next game
+	usedPiece = gamePiece.shift();
+    gamePiece.push(usedPiece);
+	
     gameInfo.style.display = 'inline';
-    gameInfo.innerText = `${gamePiece[0]}'s Turn`;
+	gameInfo.classList.add('change');
+	setTimeout(function(){gameInfo.innerText = `${gamePiece[0]}'s Turn`},200);
+	setTimeout(function(){gameInfo.classList.remove('change')},400);
+
   };
 
   function addMark(e) {
     // verify that target is in the gamebox, and that new-game button has been clicked
-    if (!e.target.classList.contains('game-box') || newGameBtn.style.display !== 'none') {
+    if (!e.target.classList.contains('game-box') || newGameBtn.classList.contains('dissappear')) {
       return;
     }
     
@@ -48,13 +55,16 @@ const GameBoard =( () => {
     if (!e.target.classList.contains('selected')) {
       // add 'selected' class to clicked box and gamePiece class
       let box = e.target;
-      box.classList.add('selected');
       box.classList.add(gamePiece[0]);
+	  box.classList.add('selected');
 
       // switch piece used
       usedPiece = gamePiece.shift();
       gamePiece.push(usedPiece);
-      gameInfo.innerText = `${gamePiece[0]}'s Turn`;
+	  
+      gameInfo.classList.add('change');
+	  setTimeout(function(){gameInfo.innerText = `${gamePiece[0]}'s Turn`},200);
+	  setTimeout(function(){gameInfo.classList.remove('change')},400);
 	  
 	  selectBoxes.push(parseInt(e.target.classList[1]));
       selectBoxes.sort();
@@ -96,20 +106,26 @@ const GameController = (() => {
   }
 
   function gameOver() {
-    gameInfo.innerText = `${gamePiece[0]} is the winner!`;
+    gameInfo.classList.add('change');
+	setTimeout(function(){gameInfo.innerText = `${gamePiece[0]} is the winnner`},200);
+	setTimeout(function(){gameInfo.classList.remove('change')},400); 
+
+	//Make loser play first move in next game;
     replay();
   }
 
   function replay() {
     // disable input of gameBoxes (removeEventListener)
 	gameBoxContainer.removeEventListener('click', GameBoard.addMark);
+	
+	newGameBtn.addEventListener('click', GameBoard.start);
 	gameBoxes.forEach(box => {
 		box.classList.add('selected'); //workaround to disable css onHover animations
     });
     setTimeout(() => {
-      gameInfo.style.display = 'none';
-      newGameBtn.style.display = 'inline';
-    }, 2000); //after 2 seconds, previous game results are gone and new game button is displayed.
+      //gameInfo.style.display = 'none';
+	  newGameBtn.classList.remove('disappear');
+    }, 2000); //after 2 seconds, new game button is displayed.
   }
 
   return { findMatch, getCombinations, gameOver, replay };
