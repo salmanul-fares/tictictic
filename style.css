@@ -275,8 +275,55 @@ svg path{
 	filter:none;
 }
 
-/****Navbar for Large Screens*/
-@media only screen and (min-width:600px) {
+/****for Small Screens*/
+@media only screen and (max-aspect-ratio:1/1) {
+	.navbar{
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+	
+	.logo:hover svg{
+		transform: rotate(-180deg);
+	}
+	
+	
+	.navbar-nav {
+		flex-direction:row;
+	}
+	
+	.nav-link {
+		justify-content: center;
+	}
+	
+	main{margin:0}
+	
+	.title{margin-top:10vh;}
+}
+
+
+/****for Medium Screens*/
+@media only screen and (min-aspect-ratio:1/1) {
+	#new-game-btn{margin-left:75%;}
+	.game-box-container{margin-left:75%;}
+	.title{
+		position: absolute;
+		top:0;
+		left:0;
+		margin-top:50vh;
+		margin-left:25%;
+		transform:translate(-50%,-50%);
+		z-index:-1;
+		}
+	.game-info{
+		position:absolute;
+		left:0;
+		margin:0;
+		margin-left:25%;
+		transform:translate(-50%,55vh);
+		z-index:-1;
+		}
+	
 	.navbar{
 		top:0;
 		width: 5rem;
@@ -314,30 +361,39 @@ svg path{
 	}
 }
 
-/****Navbar for Small Screens*/
-@media only screen and (max-width:600px) {
-	.navbar{
-		bottom: 0;
-		width: 100vw;
-		height: 5rem;
+/****for Large Screens*/
+@media only screen and (min-aspect-ratio:4/3) {
+	.game-box-container{
+		grid-template-columns: repeat(3, 16vh);
+		grid-template-rows   : repeat(3, 16vh);
+	}
+}
+
+/*** for XL Screens*/
+@media only screen and (min-aspect-ratio:16/9) {
+	.game-box-container{
+		grid-template-columns: repeat(3, 25vh);
+		grid-template-rows   : repeat(3, 25vh);
 	}
 	
-	.logo:hover svg{
-		transform: rotate(-180deg);
+}
+
+/*** for XXL Screens*/
+@media only screen and (min-aspect-ratio:21/9) {
+	.game-box-container{
+		grid-template-columns: repeat(3, 30vh);
+		grid-template-rows   : repeat(3, 30vh);
 	}
 	
-	
-	.navbar-nav {
-		flex-direction:row;
+}
+
+/*** for extra tall mobile Screens*/
+@media only screen and (max-aspect-ratio:9/21) {
+	.game-box-container{
+		grid-template-columns: repeat(3, 10vh);
+		grid-template-rows   : repeat(3, 10vh);
 	}
 	
-	.nav-link {
-		justify-content: center;
-	}
-	
-	main{margin:0}
-	
-	.title{margin-top:10vh;}
 }
 
 /*Theme elements*/
