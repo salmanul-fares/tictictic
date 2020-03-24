@@ -1,4 +1,3 @@
 ﻿To Do:
 add instructions
 add about us
-redo pretty printing
