@@ -115,8 +115,10 @@ main {
 
 
 .link-text {
-	display:none;
 	margin-left: 1rem;
+    filter:opacity(0);
+    visibility:hidden;
+    transition:filter 600ms, visibility 0s;
 }
 
 .logo-text{
@@ -332,8 +334,8 @@ svg path{
 		width:17rem;
 	}
 	.navbar:hover .link-text{
-		display:block;
-		filter:none;
+		visibility:visible;
+		filter:opacity(1);
 	}
 
 	.navbar:hover .logo-text{
