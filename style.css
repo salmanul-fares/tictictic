@@ -93,6 +93,9 @@ main {
 	transition: var(--transition-speed-navbar);
 }
 
+a{
+    outline:0;
+}
 .logo .nav-link:hover{
 	background: black;
 }
