@@ -1,3 +1,4 @@
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **GLOBAL VARIALBLES** ** ** **** ** ** **** ** ** **** ** ** ****/
 :root {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
@@ -23,7 +24,7 @@
   --x-mark-size: 9vh;
 }
 
-/***Dark and Light Theme Variables***/
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **THEME VARIALBLES** ** ** **** ** ** **** ** ** **** ** ** ****/
 .dark {
   --sub-head: #aaa;
   --text-primary: #b6b6b6;
@@ -47,7 +48,7 @@
   --text-color-one: black;
   --border-clr: black;
 }
-
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **STRCTURE ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
 body {
   background: var(--main-bg-color);
   justify-content: center;
@@ -63,7 +64,7 @@ main {
   z-index: 1;
 }
 
-/***Navbar Styling***/
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **NAVBAR ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
 .navbar {
   position: fixed;
   background: var(--bg-primary);
@@ -146,6 +147,21 @@ a {
   transition: var(--transition-speed-navbar);
 }
 
+.theme-icon {
+  display: none;
+  transition: 600ms;
+}
+
+.dark .theme-icon {
+  display: block;
+  transform: rotate(0deg);
+}
+
+.light .theme-icon {
+  display: block;
+  transform: rotate(-180deg);
+}
+
 .nav-link svg {
   width: 2rem;
   min-width: 2rem;
@@ -157,7 +173,7 @@ svg path {
   transition: var(--transition-speed-navbar);
 }
 
-/*Text Design Elements in sub pages*/
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **TEXT ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
 h1, h2, h3, h4 {
   font-family: "San Fransisco", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
@@ -215,7 +231,7 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--text-color-one), rgba(0, 0, 0, 0));
 }
 
-/*	***		CSS for the game	***		*/
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **GAME ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
 .game-box-container {
   position: absolute;
   opacity: 0;
@@ -259,13 +275,13 @@ hr {
 }
 
 .blue:after {
-  color: blue;
+  color: rgba(#223dc8, 0.87);
   content: "×";
 }
 
 .green:after {
   content: "×";
-  color: green;
+  color: rgba(#22c83d, 0.87);
 }
 
 .selected:after {
@@ -493,20 +509,4 @@ hr {
     --grid-size: 10vh;
     --x-mark-size: 7.5vh;
   }
-}
-
-/*Theme elements*/
-.theme-icon {
-  display: none;
-  transition: 600ms;
-}
-
-.dark .theme-icon {
-  display: block;
-  transform: rotate(0deg);
-}
-
-.light .theme-icon {
-  display: block;
-  transform: rotate(-180deg);
 }
