@@ -275,13 +275,13 @@ hr {
 }
 
 .blue:after {
-  color: rgba(#223dc8, 0.87);
+  color: #223dc8;
   content: "×";
 }
 
 .green:after {
   content: "×";
-  color: rgba(#22c83d, 0.87);
+  color: #22c83d;
 }
 
 .selected:after {
