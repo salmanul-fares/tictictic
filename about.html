@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <script defer src="theme.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <!-- ****** faviconit.com favicons ****** -->
-	<link rel="shortcut icon" href="icons/tictactoe-icon.ico">
-	<link rel="icon" sizes="16x16 32x32 64x64" href="icons/tictactoe-icon.ico">
-	<link rel="icon" type="image/png" sizes="196x196" href="icons/tictactoe-icon-192.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="icons/tictactoe-icon-160.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="icons/tictactoe-icon-96.png">
-	<link rel="icon" type="image/png" sizes="64x64" href="icons/tictactoe-icon-64.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/tictactoe-icon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/tictactoe-icon-16.png">
-	<link rel="apple-touch-icon" href="icons/tictactoe-icon-57.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="icons/tictactoe-icon-114.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="icons/tictactoe-icon-72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="icons/tictactoe-icon-144.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="icons/tictactoe-icon-60.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="icons/tictactoe-icon-120.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="icons/tictactoe-icon-76.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="icons/tictactoe-icon-152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="icons/tictactoe-icon-180.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="icons/tictactoe-icon-144.png">
-	<meta name="msapplication-config" content="icons/browserconfig.xml">
+  <link rel="shortcut icon" href="icons/tictactoe-icon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="icons/tictactoe-icon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="icons/tictactoe-icon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="icons/tictactoe-icon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/tictactoe-icon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/tictactoe-icon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/tictactoe-icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/tictactoe-icon-16.png">
+  <link rel="apple-touch-icon" href="icons/tictactoe-icon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/tictactoe-icon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/tictactoe-icon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/tictactoe-icon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/tictactoe-icon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/tictactoe-icon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/tictactoe-icon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/tictactoe-icon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/tictactoe-icon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="icons/tictactoe-icon-144.png">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
   <!-- ****** faviconit.com favicons ****** -->
-	
+
   <title>Tic-Tic-Tic</title>
 </head>
+
 <body>
-	<nav class="navbar">
-		<ul class="navbar-nav">
-			<li class="logo">
-				<a href="index.html" class="nav-link">
-					<span class="link-text logo-text">Tic-Tic-Tic</span>
-					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-three" class="svg-inline--fa fa-dice-three fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path></svg>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="help.html" class="nav-link">
-					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" class="svg-inline--fa fa-question-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"></path></svg>
-					<span class="link-text">Instructions</span>
-					
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link current">
-					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg>
-					<span class="link-text">About</span>
-				</a>
-			</li>
-			<li class="nav-item" id="themeButton">
-				<a href="#" class="nav-link">
-					<svg class="theme-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="adjust" class="svg-inline--fa fa-adjust fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path></svg>
-					<span class="link-text">Themify</span>
-				</a>
-		</li>
-		</ul>	
-	</nav>
-	<main>
-		<h2>The story</h2>
-		<h3>From the core JavaScript program to the responsive CSS design. I am a web-app that went through a lot of polishing. here's how my creation went.</h3>
-		<hr>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="logo">
+        <a href="index.html" class="nav-link">
+          <span class="link-text logo-text">Tic-Tic-Tic</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-three" class="svg-inline--fa fa-dice-three fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor"
+              d="M384 32H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h320c35.35 0 64-28.65 64-64V96c0-35.35-28.65-64-64-64zM128 192c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm96 96c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="help.html" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="question-circle" class="svg-inline--fa fa-question-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z">
+            </path>
+          </svg>
+          <span class="link-text">Instructions</span>
 
-		<h4><mark>Salmanul Fares</mark>, my maker, got the idea to build me from a <a href="https://youtu.be/ktPvjr1tiKk" target="_blank">youtube video</a> by Numberphile. Despite the video being released back in 2015, noone had made a software implementation of it. Until I was.</h4>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link current">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+              d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+            </path>
+          </svg>
+          <span class="link-text">About</span>
+        </a>
+      </li>
+      <li class="nav-item" id="themeButton">
+        <a href="#" class="nav-link">
+          <svg class="theme-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="adjust" class="svg-inline--fa fa-adjust fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg>
+          <span class="link-text">Themify</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h2>The story</h2>
+    <h3>From the core JavaScript program to the responsive CSS design. I am a web-app that went through a lot of polishing. here's how my creation went.</h3>
+    <hr>
 
-		<h4><mark>You can help</mark> me become better by submitting a pull request on my <a href="https://github.com/salmanul-fares/salmanul-fares.github.io" target="_blank">repo.</a></h4>
-	</main>
+    <h4><mark>Salmanul Fares</mark>, my maker, got the idea to build me from a <a href="https://youtu.be/ktPvjr1tiKk" target="_blank">youtube video</a> by Numberphile. Despite the video being released back in 2015, noone had made a software
+      implementation of it. Until I was.</h4>
+
+    <h4><mark>You can help</mark> me become better by submitting a pull request on my <a href="https://github.com/salmanul-fares/salmanul-fares.github.io" target="_blank">repo.</a></h4>
+  </main>
 
   <script defer src="theme.js"></script>
 </body>
+
 </html>
