@@ -1,4 +1,5 @@
 ﻿To Do:
-delay appearance of text in navbar
-add instructions
-add about us
+delay appearance of text in navbar -done
+add instructions - done
+add about us -  done
+add scoreboard
