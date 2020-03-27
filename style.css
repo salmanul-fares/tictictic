@@ -36,7 +36,7 @@
 }
 
 .light {
-	--sub-head:#7c7c7c;
+	--sub-head:#5c5c5c;
 	--text-primary: #1f1f1f;
 	--text-secondary: #000000;
 	--bg-primary: #ffffff;
@@ -207,9 +207,10 @@ h4{
 }
 
 h4 a{
-	opacity:1;
-	color:var(--icon-color-main);
-	background: var(--icon-color-bg);
+	color: var(--icon-color-main);
+	background: var(--sub-head);
+	border-radius: 5px;
+	padding: 2px;
 }
 
 mark{
@@ -274,18 +275,20 @@ hr{
 
 .blue:after {
   color    : blue;
-  content  : "X";
+  content  : "×";
   
 }
 
 .green:after {
-  content  : "X";
+  content  : "×";
   color    : green;
   
 }
 
 .selected:after{
 	font-size: 6vh;
+	font-weight: 900;
+	font-family: monaco;
 	transition:var(--transition-speed-navbar);
 	filter:opacity(1);
 }
