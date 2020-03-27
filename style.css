@@ -48,6 +48,20 @@
   --text-color-one: black;
   --border-clr: black;
 }
+
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **SCROLLBAR** ** ** **** ** ** **** ** ** **** ** ** ****/
+body::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
 /**** ** ** ** **** ** ** **** ** ** **** ** ** **STRCTURE ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
 body {
   background: var(--main-bg-color);
