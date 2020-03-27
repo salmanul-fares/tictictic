@@ -51,6 +51,7 @@ body {
   justify-content: center;
   margin:0;
   padding:0;
+  color: var(--text-color-one);
 }
 
 main {
@@ -158,6 +159,62 @@ svg path{
 	color:var(--icon-color-main); 
 	transition: var(--transition-speed-navbar);
 }
+
+
+/*Text Design Elements in sub pages*/
+h1,h2,h3,h4{
+	font-family: "San Fransisco","Helvetica Neue","Helvetica","Arial",sans-serif;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+h2{
+	font-size: 8rem;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -.05em;
+    
+    padding: 0;
+    margin:0 auto;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+h3{
+	font-size: 2rem;
+	line-height: 1.14286;
+	font-weight: 600;
+	letter-spacing: -.05em;
+    
+    width:40rem;
+    margin: 0 auto;
+    margin-top: 0;
+    color: #6c6c6c;
+
+}
+
+h4{
+	text-align: left;
+	font-size: 2rem;
+	letter-spacing: -.05em;
+	font-weight: 600;
+	color: #6c6c6c;
+
+	margin: 3rem;
+}
+
+mark{
+	background: none;
+	font-weight: 700;
+	color: var(--text-color-one);
+}
+
+hr{
+	margin-top: 2rem;
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--text-color-one), rgba(0, 0, 0, 0));
+}
+
 
 
 
@@ -310,11 +367,30 @@ svg path{
 		justify-content: center;
 	}
 	
-	main{margin:0}
+	main{
+		margin-left:0;
+		margin-bottom: 10rem;
+	}
 	
 	.title{margin-top:10vh;}
 	
 	.link-text{display:none;}
+
+	main h2{
+		text-align: left;
+
+	}
+
+	main h2:after{
+		content: ".";
+	}
+
+	main h3{
+		text-align: left;
+		padding: 0;
+		margin: 0;
+		width: 90vw;
+	}
 }
 
 
