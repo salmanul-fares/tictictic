@@ -11,6 +11,7 @@
 	--main-bg-color: #322332;
 	--text-color-one: white; 
 	--border-clr:white;
+	--sub-head:#aaa;
 	/*Constant Colors*/
 	--icon-color-main: #ff77cc;
     --icon-color-bg: #422223;
@@ -23,25 +24,27 @@
 /***Dark and Light Theme Variables***/
 	
 .dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-  --bg-sec-blur: rgba(20,20,24,0.5);
-  --main-bg-color: #322332;
-  --text-color-one: white;
-  --border-clr:white;
+	--sub-head:#aaa;
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
+	--bg-sec-blur: rgba(20,20,24,0.5);
+	--main-bg-color: #322332;
+	--text-color-one: white;
+	--border-clr:white;
 }
 
 .light {
-  --text-primary: #1f1f1f;
-  --text-secondary: #000000;
-  --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
-  --bg-sec-blur: rgba(228,228,224,0.5);
-  --main-bg-color: #cddccd;
-  --text-color-one: black;
-  --border-clr:black;
+	--sub-head:#7c7c7c;
+	--text-primary: #1f1f1f;
+	--text-secondary: #000000;
+	--bg-primary: #ffffff;
+	--bg-secondary: #e4e4e4;
+	--bg-sec-blur: rgba(228,228,224,0.5);
+	--main-bg-color: #cddccd;
+	--text-color-one: black;
+	--border-clr:black;
 }
 
 
@@ -184,11 +187,12 @@ h3{
 	line-height: 1.14286;
 	font-weight: 600;
 	letter-spacing: -.05em;
-    
+    text-align: center;
+
     width:40rem;
     margin: 0 auto;
     margin-top: 0;
-    color: #6c6c6c;
+    color:var(--sub-head);
 
 }
 
@@ -197,9 +201,15 @@ h4{
 	font-size: 2rem;
 	letter-spacing: -.05em;
 	font-weight: 600;
-	color: #6c6c6c;
+	color:var(--sub-head);
 
 	margin: 3rem;
+}
+
+h4 a{
+	opacity:1;
+	color:var(--icon-color-main);
+	background: var(--icon-color-bg);
 }
 
 mark{
@@ -264,12 +274,12 @@ hr{
 
 .blue:after {
   color    : blue;
-  content  : "✖";
+  content  : "X";
   
 }
 
 .green:after {
-  content  : "✖";
+  content  : "X";
   color    : green;
   
 }
