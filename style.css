@@ -7,6 +7,7 @@
 	--text-secondary: #ececec; 
 	--bg-primary: #23232e;
 	--bg-secondary: #141418;
+    --bg-sec-blur: rgba(20,20,24,0.5);
 	--main-bg-color: #322332;
 	--text-color-one: white; 
 	--border-clr:white;
@@ -26,6 +27,7 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --bg-sec-blur: rgba(20,20,24,0.5);
   --main-bg-color: #322332;
   --text-color-one: white;
   --border-clr:white;
@@ -36,6 +38,7 @@
   --text-secondary: #000000;
   --bg-primary: #ffffff;
   --bg-secondary: #e4e4e4;
+  --bg-sec-blur: rgba(228,228,224,0.5);
   --main-bg-color: #cddccd;
   --text-color-one: black;
   --border-clr:black;
@@ -54,6 +57,7 @@ main {
 	position:relative;
 	margin-left:5rem;
 	padding: 1rem;
+    z-index:-1;
 }
 
 
@@ -100,11 +104,17 @@ a{
 	background: black;
 }
 
-.nav-link:hover {
+.nav-link:hover, .current {
 	filter: grayscale(0%) opacity(1);
 	background: var(--bg-secondary);
 	color: var(--text-secondary);
 }
+
+.current, .current:hover{
+    background: var(--bg-sec-blur);
+}
+
+
 
 
 .logo .nav-link{
@@ -145,7 +155,7 @@ a{
 }
 
 svg path{
-	color:var(--icon-color-main);
+	color:var(--icon-color-main); 
 	transition: var(--transition-speed-navbar);
 }
 
@@ -356,7 +366,7 @@ svg path{
 	.logo{
 		font-weight: bold;
 		text-transform: uppercase;
-		margin-bottom: 1rem;
+		/*margin-bottom: 1rem;*/
 		text-align: center;
 		font-size: 1.5rem;
 		letter-spacing: 0.3ch;
