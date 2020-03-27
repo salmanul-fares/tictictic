@@ -407,7 +407,7 @@ svg path{
 	}
 	
 	.selected:after{
-        font-size: 7vh;
+        font-size: 6vh;
     }
 	
 }
