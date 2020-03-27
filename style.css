@@ -61,7 +61,7 @@ main {
 	position:relative;
 	margin-left:5rem;
 	padding: 1rem;
-    z-index:-1;
+    z-index:1;
 }
 
 
@@ -70,6 +70,7 @@ main {
 	position: fixed;
 	background : var(--bg-primary);	
 	transition: 200ms ease;
+	z-index: 2;
 }
 
 .navbar-nav{
@@ -207,8 +208,8 @@ h4{
 }
 
 h4 a{
-	color: var(--icon-color-main);
-	background: var(--sub-head);
+	color: var(--sub-head);
+	background: var(--bg-primary);
 	border-radius: 5px;
 	padding: 2px;
 }
@@ -288,7 +289,6 @@ hr{
 .selected:after{
 	font-size: 6vh;
 	font-weight: 900;
-	font-family: monaco;
 	transition:var(--transition-speed-navbar);
 	filter:opacity(1);
 }
@@ -303,7 +303,7 @@ hr{
   text-transform : uppercase;
   font-weight:600;
   padding		 : 0;
-  margin		 : 6rem auto;
+  margin		 : 25vh auto;
   
   transition: all 200ms;
 }
@@ -385,7 +385,7 @@ hr{
 		margin-bottom: 10rem;
 	}
 	
-	.title{margin-top:10vh;}
+	.title{margin-top:20vh;}
 	
 	.link-text{display:none;}
 
