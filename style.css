@@ -19,6 +19,8 @@
 	--transition-speed-navbar:600ms;
 	/*Size*/
 	--border-wght: 5px;
+	--grid-size:12vh; 
+	--x-mark-size:9vh;
 }
 
 /***Dark and Light Theme Variables***/
@@ -105,6 +107,7 @@ main {
 a{
     outline:0;
 }
+
 .logo .nav-link:hover{
 	background: black;
 }
@@ -118,9 +121,6 @@ a{
 .current, .current:hover{
     background: var(--bg-sec-blur);
 }
-
-
-
 
 .logo .nav-link{
 	filter:none;
@@ -242,8 +242,8 @@ hr{
   transform: translate(-50%,-50%);
   display              : grid;
   justify-content      : center; 
-  grid-template-columns: repeat(3, 12vh);
-  grid-template-rows   : repeat(3, 12vh);
+  grid-template-columns: repeat(3, var(--grid-size));
+  grid-template-rows   : repeat(3, var(--grid-size));
 }
 
 .game-box-container.appear {
@@ -252,21 +252,16 @@ hr{
 }
 
 .game-box {
- 
-
   display      : grid;
   align-items  : center;
   justify-items: center;
   transition   : filter 600ms;
-  
-  padding: 0; margin: 0;
 
   border-radius:10px;
   /*for preventing double borders*/
   border-bottom:var(--border-clr) var(--border-wght) solid;
   border-left:var(--border-clr) var(--border-wght) solid;
 }
-
 .game-box:nth-child(1),.game-box:nth-child(2),.game-box:nth-child(3) {border-top:var(--border-clr) var(--border-wght) solid;}
 .game-box:nth-child(3),.game-box:nth-child(6),.game-box:nth-child(9) {border-right:var(--border-clr) var(--border-wght) solid;}
 
@@ -293,10 +288,10 @@ hr{
 	filter:opacity(1);
 	text-align: center;
 
-	font-size: 12vh;
-	height: 12vh;
-	width: 12vh;
-	line-height: 12vh;
+	font-size: var(--x-mark-size);
+	height: var(--x-mark-size);
+	width: var(--x-mark-size);
+	line-height: var(--x-mark-size);
 }
 
 
@@ -365,6 +360,7 @@ hr{
 	filter:none;
 }
 
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **MEDIA QUERIES** ** ** **** ** ** **** ** ** **** ** ** ****/
 /****for Small Screens*/
 @media only screen and (max-aspect-ratio:11/9) {
 	.navbar{
@@ -412,7 +408,10 @@ hr{
 		width: 90vw;
 	}
 
-	h4{margin-left:0;}
+	h4{
+		margin-left:0;
+	}
+
 }
 
 
@@ -474,63 +473,34 @@ hr{
 
 /****for Large Screens*/
 @media only screen and (min-aspect-ratio:4/3) {
-	.game-box-container{
-		grid-template-columns: repeat(3, 14vh);
-		grid-template-rows   : repeat(3, 14vh);
-	}
-	
-	.selected:after{
-		font-size: 14vh;
-		height: 14vh;
-		width: 14vh;
-		line-height: 14vh;
+	:root{
+		--grid-size:16vh; 
+		--x-mark-size:12vh;
 	}
 }
 
 /*** for XL Screens*/
 @media only screen and (min-aspect-ratio:16/9) {
-	.game-box-container{
-		grid-template-columns: repeat(3, 24vh);
-		grid-template-rows   : repeat(3, 24vh);
+	:root{
+		--grid-size:24vh; 
+		--x-mark-size:18vh;
 	}
-	.selected:after{
-		font-size: 24vh;
-		height: 24vh;
-		width: 24vh;
-		line-height: 24vh;
-	}
-	
 }
 
 /*** for XXL Screens*/
 @media only screen and (min-aspect-ratio:21/9) {
-	.game-box-container{
-		grid-template-columns: repeat(3, 30vh);
-		grid-template-rows   : repeat(3, 30vh);
-	}
-	.selected:after{
-		
-		font-size: 30vh;
-		height: 30vh;
-		width: 30vh;
-		line-height: 30vh;
+	:root{
+		--grid-size:30vh; 
+		--x-mark-size:22.5vh;
 	}
 }
 
 /*** for extra tall mobile Screens*/
 @media only screen and (max-aspect-ratio:9/21) {
-	.game-box-container{
-		grid-template-columns: repeat(3, 10vh);
-		grid-template-rows   : repeat(3, 10vh);
+	:root{
+		--grid-size:10vh; 
+		--x-mark-size:7.5vh;
 	}
-	
-	.selected:after{
-        font-size: 10vh;
-		height: 10vh;
-		width: 10vh;
-		line-height: 10vh;
-    }
-	
 }
 
 /*Theme elements*/
