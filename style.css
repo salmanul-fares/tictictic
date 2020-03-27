@@ -280,7 +280,7 @@ svg path{
 }
 
 /****for Small Screens*/
-@media only screen and (max-aspect-ratio:1/1) {
+@media only screen and (max-aspect-ratio:11/9) {
 	.navbar{
 		bottom: 0;
 		width: 100vw;
@@ -303,11 +303,13 @@ svg path{
 	main{margin:0}
 	
 	.title{margin-top:10vh;}
+	
+	.link-text{display:none;}
 }
 
 
 /****for Medium Screens*/
-@media only screen and (min-aspect-ratio:1/1) {
+@media only screen and (min-aspect-ratio:11/9) {
 	#new-game-btn{margin-left:75%;}
 	.game-box-container{margin-left:75%;}
 	.title{
@@ -403,6 +405,10 @@ svg path{
 		grid-template-columns: repeat(3, 10vh);
 		grid-template-rows   : repeat(3, 10vh);
 	}
+	
+	.selected:after{
+        font-size: 7vh;
+    }
 	
 }
 
