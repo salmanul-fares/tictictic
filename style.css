@@ -259,8 +259,9 @@ hr{
   justify-items: center;
   transition   : filter 600ms;
   
+  padding: 0; margin: 0;
+
   border-radius:10px;
-  
   /*for preventing double borders*/
   border-bottom:var(--border-clr) var(--border-wght) solid;
   border-left:var(--border-clr) var(--border-wght) solid;
@@ -287,10 +288,15 @@ hr{
 }
 
 .selected:after{
-	font-size: 6vh;
 	font-weight: 900;
 	transition:var(--transition-speed-navbar);
 	filter:opacity(1);
+	text-align: center;
+
+	font-size: 12vh;
+	height: 12vh;
+	width: 12vh;
+	line-height: 12vh;
 }
 
 
@@ -474,7 +480,10 @@ hr{
 	}
 	
 	.selected:after{
-		font-size: 7vh;
+		font-size: 14vh;
+		height: 14vh;
+		width: 14vh;
+		line-height: 14vh;
 	}
 }
 
@@ -485,7 +494,10 @@ hr{
 		grid-template-rows   : repeat(3, 24vh);
 	}
 	.selected:after{
-		font-size: 12vh;
+		font-size: 24vh;
+		height: 24vh;
+		width: 24vh;
+		line-height: 24vh;
 	}
 	
 }
@@ -497,7 +509,11 @@ hr{
 		grid-template-rows   : repeat(3, 30vh);
 	}
 	.selected:after{
-		font-size: 15vh;
+		
+		font-size: 30vh;
+		height: 30vh;
+		width: 30vh;
+		line-height: 30vh;
 	}
 }
 
@@ -509,7 +525,10 @@ hr{
 	}
 	
 	.selected:after{
-        font-size: 5vh;
+        font-size: 10vh;
+		height: 10vh;
+		width: 10vh;
+		line-height: 10vh;
     }
 	
 }
