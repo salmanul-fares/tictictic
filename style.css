@@ -402,8 +402,8 @@ svg path{
 /*** for extra tall mobile Screens*/
 @media only screen and (max-aspect-ratio:9/21) {
 	.game-box-container{
-		grid-template-columns: repeat(3, 10vh);
-		grid-template-rows   : repeat(3, 10vh);
+		grid-template-columns: repeat(3, 9vh);
+		grid-template-rows   : repeat(3, 9vh);
 	}
 	
 	.selected:after{
