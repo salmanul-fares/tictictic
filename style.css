@@ -208,7 +208,7 @@ svg path{
 }
 
 .selected:after{
-	font-size: 8vh;
+	font-size: 6vh;
 	transition:var(--transition-speed-navbar);
 	filter:opacity(1);
 }
@@ -367,12 +367,12 @@ svg path{
 /****for Large Screens*/
 @media only screen and (min-aspect-ratio:4/3) {
 	.game-box-container{
-		grid-template-columns: repeat(3, 15vh);
-		grid-template-rows   : repeat(3, 15vh);
+		grid-template-columns: repeat(3, 14vh);
+		grid-template-rows   : repeat(3, 14vh);
 	}
 	
 	.selected:after{
-		font-size: 10vh;
+		font-size: 7vh;
 	}
 }
 
@@ -383,7 +383,7 @@ svg path{
 		grid-template-rows   : repeat(3, 24vh);
 	}
 	.selected:after{
-		font-size: 16vh;
+		font-size: 12vh;
 	}
 	
 }
@@ -395,19 +395,19 @@ svg path{
 		grid-template-rows   : repeat(3, 30vh);
 	}
 	.selected:after{
-		font-size: 20vh;
+		font-size: 15vh;
 	}
 }
 
 /*** for extra tall mobile Screens*/
 @media only screen and (max-aspect-ratio:9/21) {
 	.game-box-container{
-		grid-template-columns: repeat(3, 9vh);
-		grid-template-rows   : repeat(3, 9vh);
+		grid-template-columns: repeat(3, 10vh);
+		grid-template-rows   : repeat(3, 10vh);
 	}
 	
 	.selected:after{
-        font-size: 6vh;
+        font-size: 5vh;
     }
 	
 }
