@@ -259,7 +259,7 @@ hr {
   top: 0;
   left: 0;
   margin-left: 50%;
-  margin-top: 50vh;
+  margin-top: 45vh;
   transform: translate(-50%, -50%);
   display: grid;
   justify-content: center;
@@ -334,7 +334,7 @@ hr {
  transition: all var(--transition-speed-navbar);
  display: flex;
  justify-content: center;
- margin-top: 40vh;
+ margin-top: 43vh;
 }
 .score{
   font-family: qubo;
@@ -471,11 +471,11 @@ hr {
 
   main {
     margin-left: 0;
-    margin-bottom: 10rem;
+    /* margin-bottom: 10rem; */
   }
 
   .title {
-    margin-top: 20vh;
+    margin-top: 6vh;
   }
 
   .link-text {
