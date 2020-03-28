@@ -23,7 +23,7 @@
   /*Size*/
   --border-wght: 5px;
   --grid-size: 12vh;
-  --x-mark-size: 9vh;
+  --x-mark-size: 3rem;
 }
 
 /**** ** ** ** **** ** ** **** ** ** **** ** ** **THEME VARIALBLES** ** ** **** ** ** **** ** ** **** ** ** ****/
@@ -296,13 +296,27 @@ hr {
 }
 
 .game-box.blue:after {
-  color: var(--blue-piece);
-  content: "×";
+  background-color: var(--bg-primary);
+  color:var(--blue-piece);
+  border-radius: 50%;
+  border: 0.3rem solid  var(--blue-piece);
+  content: " ";
+  width: 3rem;
+  height: 3rem;
+  padding: 0rem;
+
 }
 
 .game-box.green:after {
-  content: "×";
-  color: var(--green-piece);
+  background-color: var(--bg-primary);
+  color:var(--green-piece);
+  border-radius: 50%;
+  border: 0.3rem solid  var(--green-piece);
+  content: " ";
+  width: 3rem;
+  height: 3rem;
+  padding: 0rem;
+
 }
 
 .selected:after {
@@ -310,10 +324,10 @@ hr {
   transition: var(--transition-speed-navbar);
   filter: opacity(1);
   text-align: center;
-  font-size: var(--x-mark-size);
+  /* font-size: var(--x-mark-size);
   height: var(--x-mark-size);
   width: var(--x-mark-size);
-  line-height: var(--x-mark-size);
+  line-height: var(--x-mark-size); */
 }
 
 .scores{
@@ -553,8 +567,7 @@ hr {
 /****for Large Screens*/
 @media only screen and (min-aspect-ratio:4/3) {
   :root {
-    --grid-size: 16vh;
-    --x-mark-size: 12vh;
+    --grid-size: 16vh
   }
 }
 
@@ -562,7 +575,6 @@ hr {
 @media only screen and (min-aspect-ratio:16/9) {
   :root {
     --grid-size: 24vh;
-    --x-mark-size: 18vh;
   }
 }
 
@@ -570,7 +582,6 @@ hr {
 @media only screen and (min-aspect-ratio:21/9) {
   :root {
     --grid-size: 30vh;
-    --x-mark-size: 22.5vh;
   }
 }
 
@@ -578,6 +589,5 @@ hr {
 @media only screen and (max-aspect-ratio:9/21) {
   :root {
     --grid-size: 10vh;
-    --x-mark-size: 7.5vh;
   }
 }
