@@ -16,6 +16,8 @@
   /*Constant Colors*/
   --icon-color-main: #ff77cc;
   --icon-color-bg: #422223;
+  --blue-piece: #223dc8;
+  --green-piece: #22c83d;
   /*Speed*/
   --transition-speed-navbar: 600ms;
   /*Size*/
@@ -76,6 +78,11 @@ main {
   margin-left: 5rem;
   padding: 1rem;
   z-index: 1;
+}
+
+@font-face {
+  font-family: qubo;
+  src: url('fonts/qubo.ttf') format('truetype');
 }
 
 /**** ** ** ** **** ** ** **** ** ** **** ** ** **NAVBAR ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
@@ -289,13 +296,13 @@ hr {
 }
 
 .blue:after {
-  color: #223dc8;
+  color: var(--blue-piece);
   content: "×";
 }
 
 .green:after {
   content: "×";
-  color: #22c83d;
+  color: var(--green-piece);
 }
 
 .selected:after {
@@ -319,6 +326,40 @@ hr {
   padding: 0;
   margin: 25vh auto;
   transition: all 200ms;
+}
+.scores{
+transition: all var(--transition-speed-navbar);
+ display: flex;
+ opacity: 0;
+ justify-content: center;
+ margin-top: 40vh;
+}
+.score{
+  font-family: qubo;
+  color: var(--text-color-one);
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0.3rem solid;
+
+
+
+  text-align: center;
+  padding: 0rem;
+  border-radius: 50%;
+  margin-top: auto;
+  transition: all 200ms;
+  background-color: var(--bg-primary);
+}
+
+.score.blu{
+  transform: translate(-1rem,2rem);
+  border-color:  var(--blue-piece);
+}
+
+.score.grn{
+  transform: translate(1rem,2rem);
+  border-color: var(--green-piece);
 }
 
 .game-info.change {
@@ -439,23 +480,24 @@ hr {
     margin-left: 75%;
   }
 
-  .title {
+  .title, .game-info, .scores{
     position: absolute;
-    top: 0;
     left: 0;
-    margin-top: 50vh;
-    margin-left: 25%;
+    top: 0;
+    margin: 0 25%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+  }
+
+  .title {
+    margin-top: 50vh;
   }
 
   .game-info {
-    position: absolute;
-    left: 0;
-    margin: 0;
-    margin-left: 25%;
-    transform: translate(-50%, 55vh);
-    z-index: -1;
+    margin-top: 55vh;
+  }
+
+  .scores{
+    margin-top: 60vh
   }
 
   .navbar {
