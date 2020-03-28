@@ -5,7 +5,8 @@ const gameBoxContainer = document.querySelector('.game-box-container');
 const gameInfo = document.querySelector('.game-info');
 const gameBoxes = Array.from(document.querySelectorAll('.game-box')); //array from zero to eight of each of the boxes
 const gamePiece = ['blue', 'green']; //if changing array, update css class names also!
-//// TODO: query the two score elements
+const blueScore = document.querySelector('#bscore');
+const greenScore = document.querySelector('#gscore');
 
 /******** Global Vars ********/
 
@@ -131,8 +132,13 @@ const GameController = (() => {
 
     points[gamePiece[0]] += 1;
     console.log(points);
+    document.querySelector('.scores').style.opacity='1';
+    blueScore.innerText = points['blue'];
+    greenScore.innerText = points['green'];
 
     //Make loser play first move in next game;
+    usedPiece = gamePiece.shift();
+    gamePiece.push(usedPiece);
     replay();
   }
 

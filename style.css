@@ -314,7 +314,9 @@ hr {
   transition: all 200ms;
 }
 .scores{
+transition: all var(--transition-speed-navbar);
  display: flex;
+ opacity: 0;
  justify-content: center;
  margin-top: 40vh;
 }
