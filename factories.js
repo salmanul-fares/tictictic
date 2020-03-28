@@ -132,14 +132,13 @@ const GameController = (() => {
       gameInfo.classList.add('winner');
     }, 100);
     setTimeout(function() {
-      gameInfo.classList.remove('change')
+      gameInfo.classList.remove('change');
+      points[gamePiece[1]] += 1;
+      document.querySelector('.blu').style.opacity='1';
+      document.querySelector('.grn').style.opacity='1';
+      blueScore.innerText = points['blue'];
+      greenScore.innerText = points['green'];
     }, 200);
-
-    points[gamePiece[1]] += 1;
-    document.querySelector('.blu').style.opacity='1';
-    document.querySelector('.grn').style.opacity='1';
-    blueScore.innerText = points['blue'];
-    greenScore.innerText = points['green'];
 
 
     replay();
