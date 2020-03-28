@@ -357,12 +357,12 @@ hr {
 }
 
 .score.blu{
-  transform: translate(-3rem,2rem);
+  transform: translate(-1.5rem,2rem);
   border-color:  var(--blue-piece);
 }
 
 .score.grn{
-  transform: translate(3rem,2rem);
+  transform: translate(1.5rem,2rem);
   border-color: var(--green-piece);
 }
 
@@ -528,6 +528,9 @@ hr {
   .scores{
     margin-top: 55vh
   }
+
+  .score.grn{transform: translate(3rem,2rem);}
+  .score.blu{transform: translate(-3rem,2rem);}
 
   .navbar {
     top: 0;
