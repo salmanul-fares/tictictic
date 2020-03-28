@@ -5,6 +5,7 @@ const gameBoxContainer = document.querySelector('.game-box-container');
 const gameInfo = document.querySelector('.game-info');
 const gameBoxes = Array.from(document.querySelectorAll('.game-box')); //array from zero to eight of each of the boxes
 const gamePiece = ['blue', 'green']; //if changing array, update css class names also!
+//// TODO: query the two score elements
 
 /******** Global Vars ********/
 
@@ -20,6 +21,7 @@ const winningPatterns = [
   '456',
   '789'
 ];
+var points = {blue:0, green:0};
 
 /******** Objects ********/
 
@@ -121,11 +123,14 @@ const GameController = (() => {
   function gameOver() {
     gameInfo.classList.add('change');
     setTimeout(function() {
-      gameInfo.innerText = `${gamePiece[0]} is the winnner`
+      gameInfo.innerText = `${gamePiece[0]} wins`
     }, 200);
     setTimeout(function() {
       gameInfo.classList.remove('change')
     }, 400);
+
+    points[gamePiece[0]] += 1;
+    console.log(points);
 
     //Make loser play first move in next game;
     replay();
