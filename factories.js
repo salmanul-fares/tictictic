@@ -156,7 +156,7 @@ const GameController = (() => {
     });
     setTimeout(() => {
       newGameBtn.classList.remove('disappear');
-    }, 2000); //after 2 seconds, new game button is displayed.
+    }, 1000); //after 1 second, new game button is displayed.
   }
 
   return {
