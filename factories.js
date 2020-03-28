@@ -36,6 +36,8 @@ const GameBoard = (() => {
     gameBoxes.forEach(box => {
       box.classList.remove('blue', 'green', 'selected');
     });
+    gameInfo.classList.remove('blue','green', 'winner');
+
 
     //make last game's loser play first in next game
     usedPiece = gamePiece.shift();
@@ -44,7 +46,8 @@ const GameBoard = (() => {
     gameInfo.style.display = 'inline';
     gameInfo.classList.add('change');
     setTimeout(function() {
-      gameInfo.innerText = `${gamePiece[0]}'s Turn`
+      gameInfo.classList.add(gamePiece[0]);
+      // gameInfo.innerText = `${gamePiece[0]}'s Turn`
     }, 200);
     setTimeout(function() {
       gameInfo.classList.remove('change')
@@ -71,7 +74,8 @@ const GameBoard = (() => {
 
       gameInfo.classList.add('change');
       setTimeout(function() {
-        gameInfo.innerText = `${gamePiece[0]}'s Turn`
+        gameInfo.classList.remove(gamePiece[1]);
+        gameInfo.classList.add(gamePiece[0]);
       }, 200);
       setTimeout(function() {
         gameInfo.classList.remove('change')
@@ -124,7 +128,8 @@ const GameController = (() => {
   function gameOver() {
     gameInfo.classList.add('change');
     setTimeout(function() {
-      gameInfo.innerText = `${gamePiece[0]} wins`
+      // gameInfo.innerText = `${gamePiece[0]} wins`
+      gameInfo.classList.add('winner');
     }, 200);
     setTimeout(function() {
       gameInfo.classList.remove('change')

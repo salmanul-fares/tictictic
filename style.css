@@ -295,12 +295,12 @@ hr {
   filter: opacity(0.5);
 }
 
-.blue:after {
+.game-box.blue:after {
   color: var(--blue-piece);
   content: "×";
 }
 
-.green:after {
+.game-box.green:after {
   content: "×";
   color: var(--green-piece);
 }
@@ -319,14 +319,33 @@ hr {
 .game-info {
   position: fixed;
   bottom: 0;
-  color: var(--text-color-one);
-  font-size: 1.2rem;
+  /* color: var(--text-color-one); */
+
+  /* font-size: 2rem; */
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+
   text-transform: uppercase;
   font-weight: 600;
   padding: 0;
   margin: 25vh auto;
   transition: all 200ms;
+  background: var(--bg-primary);
 }
+
+.game-info.green{border: 0.3rem solid var(--green-piece);}
+.game-info.blue{border: 0.3rem solid var(--blue-piece);}
+
+.game-info.green.winner{
+  border: 0.3rem dashed var(--bg-primary);
+  background: var(--green-piece);
+}
+.game-info.blue.winner{
+  border: 0.3rem dashed var(--bg-primary);
+  background: var(--blue-piece);
+}
+
 .scores{
 transition: all var(--transition-speed-navbar);
  display: flex;
@@ -353,12 +372,12 @@ transition: all var(--transition-speed-navbar);
 }
 
 .score.blu{
-  transform: translate(-1rem,2rem);
+  transform: translate(-3rem,2rem);
   border-color:  var(--blue-piece);
 }
 
 .score.grn{
-  transform: translate(1rem,2rem);
+  transform: translate(3rem,2rem);
   border-color: var(--green-piece);
 }
 
