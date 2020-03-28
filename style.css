@@ -259,7 +259,7 @@ hr {
   top: 0;
   left: 0;
   margin-left: 50%;
-  margin-top: 45vh;
+  margin-top: 40vh;
   transform: translate(-50%, -50%);
   display: grid;
   justify-content: center;
@@ -411,6 +411,8 @@ hr {
   color: var(--text-color-one);
   font-size: 2rem;
   letter-spacing: 0.3ch;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .new-game {
@@ -423,7 +425,7 @@ hr {
   top: 0;
   left: 0;
   margin-left: 50%;
-  margin-top: 50vh;
+  margin-top: 40vh;
   transform: translate(-50%, -50%);
   height: calc(var(--grid-size)*2);
   color: var(--icon-color-main);
@@ -505,12 +507,9 @@ hr {
 
 /****for Medium Screens*/
 @media only screen and (min-aspect-ratio:11/9) {
-  #new-game-btn {
+  #new-game-btn, .game-box-container {
     margin-left: 75%;
-  }
-
-  .game-box-container {
-    margin-left: 75%;
+    margin-top: 50vh;
   }
 
   .title, .game-info, .scores{
