@@ -130,6 +130,8 @@ const GameController = (() => {
     setTimeout(function() {
       // gameInfo.innerText = `${gamePiece[0]} wins`
       gameInfo.classList.add('winner');
+      gameInfo.classList.add(gamePiece[0]);
+      gameInfo.classList.remove(gamePiece[1]);
     }, 100);
     setTimeout(function() {
       gameInfo.classList.remove('change');
