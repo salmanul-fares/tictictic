@@ -48,10 +48,10 @@ const GameBoard = (() => {
     setTimeout(function() {
       gameInfo.classList.add(gamePiece[0]);
       // gameInfo.innerText = `${gamePiece[0]}'s Turn`
-    }, 200);
+    }, 100);
     setTimeout(function() {
       gameInfo.classList.remove('change')
-    }, 400);
+    }, 200);
 
   };
 
@@ -76,10 +76,10 @@ const GameBoard = (() => {
       setTimeout(function() {
         gameInfo.classList.remove(gamePiece[1]);
         gameInfo.classList.add(gamePiece[0]);
-      }, 200);
+      }, 100);
       setTimeout(function() {
         gameInfo.classList.remove('change')
-      }, 400);
+      }, 200);
 
       selectBoxes.push(parseInt(e.target.classList[1]));
       selectBoxes.sort();
@@ -130,14 +130,15 @@ const GameController = (() => {
     setTimeout(function() {
       // gameInfo.innerText = `${gamePiece[0]} wins`
       gameInfo.classList.add('winner');
-    }, 200);
+    }, 100);
     setTimeout(function() {
       gameInfo.classList.remove('change')
-    }, 400);
+    }, 200);
 
     points[gamePiece[1]] += 1;
     console.log(points);
-    document.querySelector('.scores').style.opacity='1';
+    document.querySelector('.blu').style.opacity='1';
+    document.querySelector('.grn').style.opacity='1';
     blueScore.innerText = points['blue'];
     greenScore.innerText = points['green'];
 

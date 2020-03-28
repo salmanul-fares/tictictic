@@ -316,40 +316,9 @@ hr {
   line-height: var(--x-mark-size);
 }
 
-.game-info {
-  position: fixed;
-  bottom: 0;
-  /* color: var(--text-color-one); */
-
-  /* font-size: 2rem; */
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0;
-  margin: 25vh auto;
-  transition: all 200ms;
-  background: var(--bg-primary);
-}
-
-.game-info.green{border: 0.3rem solid var(--green-piece);}
-.game-info.blue{border: 0.3rem solid var(--blue-piece);}
-
-.game-info.green.winner{
-  border: 0.3rem dashed var(--bg-primary);
-  background: var(--green-piece);
-}
-.game-info.blue.winner{
-  border: 0.3rem dashed var(--bg-primary);
-  background: var(--blue-piece);
-}
-
 .scores{
-transition: all var(--transition-speed-navbar);
+ transition: all var(--transition-speed-navbar);
  display: flex;
- opacity: 0;
  justify-content: center;
  margin-top: 40vh;
 }
@@ -357,18 +326,20 @@ transition: all var(--transition-speed-navbar);
   font-family: qubo;
   color: var(--text-color-one);
   font-size: 2rem;
-  width: 3rem;
-  height: 3rem;
   border: 0.3rem solid;
-
-
-
   text-align: center;
-  padding: 0rem;
-  border-radius: 50%;
-  margin-top: auto;
   transition: all 200ms;
   background-color: var(--bg-primary);
+  border-radius: 50%;
+
+  width: 3rem;
+  height: 3rem;
+  padding: 0rem;
+  margin-top: auto;
+}
+.blu,.grn{
+  transition: all var(--transition-speed-navbar);
+  opacity: 0;
 }
 
 .score.blu{
@@ -380,6 +351,35 @@ transition: all var(--transition-speed-navbar);
   transform: translate(3rem,2rem);
   border-color: var(--green-piece);
 }
+
+
+.score.game-info {
+  width: 3rem;
+  height: 3rem;
+  padding: 0rem;
+  margin-top: auto;
+
+  transform: translateY(2rem);
+
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 100ms;
+  background: var(--bg-primary);
+}
+
+.game-info.green{border: 0.3rem solid var(--green-piece);}
+.game-info.blue{border: 0.3rem solid var(--blue-piece);}
+
+.game-info.green.winner{
+  /* border: 0.3rem dashed var(--bg-primary); */
+  background: var(--green-piece);
+}
+.game-info.blue.winner{
+  /* border: 0.3rem dashed var(--bg-primary); */
+  background: var(--blue-piece);
+}
+
 
 .game-info.change {
   opacity: 0
@@ -511,12 +511,8 @@ transition: all var(--transition-speed-navbar);
     margin-top: 50vh;
   }
 
-  .game-info {
-    margin-top: 55vh;
-  }
-
   .scores{
-    margin-top: 60vh
+    margin-top: 55vh
   }
 
   .navbar {
