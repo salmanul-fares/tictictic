@@ -136,7 +136,6 @@ const GameController = (() => {
     }, 200);
 
     points[gamePiece[1]] += 1;
-    console.log(points);
     document.querySelector('.blu').style.opacity='1';
     document.querySelector('.grn').style.opacity='1';
     blueScore.innerText = points['blue'];
