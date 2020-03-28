@@ -130,28 +130,28 @@ const GameController = (() => {
       gameInfo.classList.remove('change')
     }, 400);
 
-    points[gamePiece[0]] += 1;
+    points[gamePiece[1]] += 1;
     console.log(points);
     document.querySelector('.scores').style.opacity='1';
     blueScore.innerText = points['blue'];
     greenScore.innerText = points['green'];
 
-    //Make loser play first move in next game;
-    usedPiece = gamePiece.shift();
-    gamePiece.push(usedPiece);
+
     replay();
   }
 
   function replay() {
-    // disable input of gameBoxes (removeEventListener)
-    gameBoxContainer.removeEventListener('click', GameBoard.addMark);
+    //Make loser play first move in next game;
+    usedPiece = gamePiece.shift();
+    gamePiece.push(usedPiece);
 
+    gameBoxContainer.removeEventListener('click', GameBoard.addMark);
     newGameBtn.addEventListener('click', GameBoard.start);
+
     gameBoxes.forEach(box => {
       box.classList.add('selected'); //workaround to disable css onHover animations
     });
     setTimeout(() => {
-      //gameInfo.style.display = 'none';
       newGameBtn.classList.remove('disappear');
     }, 2000); //after 2 seconds, new game button is displayed.
   }
