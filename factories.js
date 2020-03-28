@@ -130,12 +130,12 @@ const GameController = (() => {
     setTimeout(function() {
       // gameInfo.innerText = `${gamePiece[0]} wins`
       gameInfo.classList.add('winner');
-      gameInfo.classList.add(gamePiece[1]);
-      gameInfo.classList.remove(gamePiece[0]);
+      gameInfo.classList.add(gamePiece[0]);
+      gameInfo.classList.remove(gamePiece[1]);
     }, 100);
     setTimeout(function() {
       gameInfo.classList.remove('change');
-      points[gamePiece[1]] += 1;
+      points[gamePiece[0]] += 1;
       document.querySelector('.blu').style.opacity='1';
       document.querySelector('.grn').style.opacity='1';
       blueScore.innerText = points['blue'];
@@ -147,9 +147,6 @@ const GameController = (() => {
   }
 
   function replay() {
-    //Make loser play first move in next game;
-    usedPiece = gamePiece.shift();
-    gamePiece.push(usedPiece);
 
     gameBoxContainer.removeEventListener('click', GameBoard.addMark);
     newGameBtn.addEventListener('click', GameBoard.start);
