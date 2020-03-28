@@ -50,6 +50,20 @@
   --text-color-one: black;
   --border-clr: black;
 }
+
+/**** ** ** ** **** ** ** **** ** ** **** ** ** **SCROLLBAR** ** ** **** ** ** **** ** ** **** ** ** ****/
+body::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
 /**** ** ** ** **** ** ** **** ** ** **** ** ** **STRCTURE ELEMENTS** ** ** **** ** ** **** ** ** **** ** ** ****/
 body {
   background: var(--main-bg-color);
@@ -378,7 +392,7 @@ transition: all var(--transition-speed-navbar);
   margin-left: 50%;
   margin-top: 50vh;
   transform: translate(-50%, -50%);
-  height: 20vh;
+  height: calc(var(--grid-size)*2);
   color: var(--icon-color-main);
   cursor: pointer;
   border-radius: 50%;
