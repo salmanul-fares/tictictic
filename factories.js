@@ -1,4 +1,4 @@
-/******** UI Vars ********/
+/******** UI Vars *********/
 
 const newGameBtn = document.querySelector('#new-game-btn');
 const gameBoxContainer = document.querySelector('.game-box-container');
