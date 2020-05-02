@@ -3,9 +3,10 @@ const themeMap = {
   light: "dark",
 };
 
-const theme = localStorage.getItem('theme') //taking theme from localStorage if already available
+//taking theme from localStorage if already available else storing it into cache
+const theme = localStorage.getItem('theme') 
   ||
-  (tmp = Object.keys(themeMap)[0], localStorage.setItem('theme', tmp), tmp); //storing theme into system cache if not already saved.
+  (tmp = Object.keys(themeMap)[0], localStorage.setItem('theme', tmp), tmp);
 
 const bodyClass = document.body.classList;
 bodyClass.add(theme);
