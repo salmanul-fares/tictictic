@@ -40,8 +40,8 @@ const GameBoard = (() => {
 
 
     //make last game's loser play first in next game
-    usedPiece = gamePiece.shift();
-    gamePiece.push(usedPiece);
+   // usedPiece = gamePiece.shift();
+    //gamePiece.push(usedPiece);
 
     gameInfo.style.display = 'inline';
     gameInfo.classList.add('change');
